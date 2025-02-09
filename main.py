@@ -19,7 +19,7 @@ def home():
         if user_input:
             try:
                 # Generate AI response
-                model = genai.GenerativeModel("gemini-1.5-flash")
+                model = genai.GenerativeModel("gemini-1.5-flash-8B")
                 response = model.generate_content(user_input)
                 response_text = response.text
             except Exception as e:
