@@ -12,16 +12,17 @@
             font-family: Arial, sans-serif;
             background: url('https://files.123freevectors.com/wp-content/original/504723-valentines-day-holiday-background-greeting-card-with-hearts.jpg') no-repeat center center/cover;
             backdrop-filter: blur(8px);
+            background-attachment: fixed; /* Keeps the background fixed */
             color: white;
             text-align: center;
             margin: 0;
             padding: 0;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             position: relative;
+            min-height: 100%; /* Makes sure the background covers the whole page */
         }
 
         /* Floating Hearts Animation */
@@ -150,15 +151,15 @@
         function scrollToInput() {
             document.getElementById("ask-input").scrollIntoView({ behavior: "smooth" });
         }
-function scrollToInput() {
-    setTimeout(() => {
-        let responseBox = document.getElementById("response");
-        if (responseBox) {
-            responseBox.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-    }, 500);
-}
 
+        function scrollToInput() {
+            setTimeout(() => {
+                let responseBox = document.getElementById("response");
+                if (responseBox) {
+                    responseBox.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            }, 500);
+        }
     </script>
 </head>
 <body>
